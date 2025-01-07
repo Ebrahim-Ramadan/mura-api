@@ -15,6 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     return render_template('index.html')
 
+# use thie exposed endpoint to upload image from externals
 @app.route('/upload', methods=['POST'])
 def upload_image():
     if 'image' not in request.files:
